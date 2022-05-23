@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -R a+x
+find codigo/ -type d -exec chmod 755 {} \;
