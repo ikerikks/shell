@@ -1,2 +1,2 @@
 #!/bin/bash
-find ./ -type d -print | sort -M
+find ./ -type d -print | sort -t
