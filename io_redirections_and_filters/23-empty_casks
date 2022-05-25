@@ -1,2 +1,2 @@
 #!/bin/bash
-find codigo/ | cut -d '/' -f3
+find ./ cut -d '/' -f3
