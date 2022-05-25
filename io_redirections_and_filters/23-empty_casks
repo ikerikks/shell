@@ -1,2 +1,3 @@
 #!/bin/bash
-find ./ | ls -a -1
+find ./ -empty -fprint %f
+ 
