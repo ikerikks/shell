@@ -13,7 +13,7 @@ fi
 
 if [ -s school ]
 then
-	echo "school file is  not empty"
+	echo "school file is not empty"
 
 else 
 	echo "school file is empty"
