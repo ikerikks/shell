@@ -11,12 +11,12 @@ else
 	echo "school file does not exist"
 fi
 
-if (( "find . -empty -name \"school\"" ))
+if [ -s school ]
 then
-	echo "school file is empty"
+	echo "school file is  not empty"
 
 else 
-	echo "school is not empty"
+	echo "school file is empty"
 fi
 
 if [ -f school ]
