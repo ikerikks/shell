@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#checking if there is a file or not
 
 (( file="school" ))
 
