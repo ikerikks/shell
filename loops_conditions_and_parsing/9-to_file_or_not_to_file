@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+(( file="school" ))
+
+if [ -e $file ]
+then
+	echo "$file file exists"
+
+elif [ ! -e $file ]
+then
+	echo "$file file does not exist"
+
+elif [ -s $file ]
+then
+	echo "$file file is empty"
+
+elif [ ! -s $file ]
+then 
+	echo "$file is not empty"
+
+elif [ -f $file ]
+then
+	echo "$file file is a regular file"
+
+
+fi
