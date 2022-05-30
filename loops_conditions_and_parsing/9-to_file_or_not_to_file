@@ -11,7 +11,7 @@ else
 	echo "school file does not exist"
 fi
 
-if [ -s school ]
+if [ -e school ] && [ -s school ] 
 then
 	echo "school file is not empty"
 
@@ -19,7 +19,7 @@ else
 	echo "school file is empty"
 fi
 
-if [ -f school ]
+if [ -e school ] && [ -f school ] 
 then
 	echo "school is a regular file"
 
