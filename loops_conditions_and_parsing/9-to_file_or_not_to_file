@@ -11,7 +11,7 @@ else
 	echo "school file does not exist"
 fi
 
-if [ -s school ]
+if (( "find . -empty -name "school"" ))
 then
 	echo "school file is empty"
 
