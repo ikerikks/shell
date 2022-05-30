@@ -5,5 +5,5 @@
 
 for i in "ls"
 do
-	find . -name "[!.]*" | cut -d '-' -f2
+	find . -type f -name "[!.]*" | cut -d '-' -f2
 done	
