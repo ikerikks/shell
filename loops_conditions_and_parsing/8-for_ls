@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
+#for ls loop
+
+((i))
 
 for i in "ls"
 do
-	ls | cut -d '-' -f2   
+	find . -name "[!.*]" | cut -d '-' -f2
 done	
