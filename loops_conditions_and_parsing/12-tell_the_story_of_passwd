@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#the story of passwd
+
+IFS=":"
+
+cat < /etc/passwd | while  read -r "USERNAME" "GROUP_ID" "HOME_DIRECTORY" "COMMAND/SHEL""USER"
+do
+        echo "$USERNAME $GROUP_ID $HOME_DIRECTORY $COMMAND/SHEL $USER"
+done
