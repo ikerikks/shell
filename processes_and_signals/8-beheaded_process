@@ -2,5 +2,5 @@
 #beheaded process
 
 
-killall -9 *
+killall -9 ./*glob*
 
