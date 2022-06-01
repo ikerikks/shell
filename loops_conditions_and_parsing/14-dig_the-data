@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #apache big data
 
-awk -F '{ print $1," ",$9}' apache-access.log | sort
+awk -F '{ print $1 " " $9}' apache-access.log | sort
