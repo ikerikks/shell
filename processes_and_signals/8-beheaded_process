@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-#beheaded process 
+#beheaded process
 
-pkill -9 
+
+killall -9 7-highlander
+ 
 
