@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #beheaded process 
 
-kill -s SIGKILL
+kill -s SIGTERM
 
