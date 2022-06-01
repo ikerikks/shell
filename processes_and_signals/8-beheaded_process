@@ -2,5 +2,6 @@
 #beheaded process
 
 
-killall -9 ./*glob*
+killall -9 "7-highlander"
+
 
