@@ -2,6 +2,5 @@
 #beheaded process
 
 
-killall -9 7-highlander
- 
+killall -9 *
 
