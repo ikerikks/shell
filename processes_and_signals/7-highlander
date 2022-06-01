@@ -2,7 +2,7 @@
 #highlander
 
 
-trap "echo I am invincible!!!; exit" SIGTERM
+trap "echo I am invincible!!!" SIGTERM
 
 while true 
 do
