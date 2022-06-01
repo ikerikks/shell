@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #beheaded process
 
-pkill -9 .
+trap "exit" SIGKILL
 
