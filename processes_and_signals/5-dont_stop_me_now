@@ -1,13 +1,4 @@
 #!/usr/bin/env bash
-#to infinity and beyond
+#don't stop me now
 
-(( i = 0))
-
-while [ $i -lt 10 ]
-do
-	echo "To infinity and beyond"
-
-	kill ps
-
-done
-
+kill ps
