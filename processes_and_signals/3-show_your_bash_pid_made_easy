@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 #bash PID
+# shellcheck disable=SC2009
 
 pstree -pc | grep "bash"
