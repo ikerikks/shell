@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #stop me, if you can
 
-pkill -9 -1 
+pkill -9 
 
