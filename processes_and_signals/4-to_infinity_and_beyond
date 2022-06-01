@@ -3,12 +3,11 @@
 
 (( i = 0))
 
-while [ $i -eq 10 ]
+while [ $i -lt 10 ]
 do
 	echo "To infinity and beyond"
-	sleep 2
 
-	(( i++ ))
+	sleep 2
 
 done
 
