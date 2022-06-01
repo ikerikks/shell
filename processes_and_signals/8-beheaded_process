@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #beheaded process 
 
-kill -9 
+pkill -9 
 
