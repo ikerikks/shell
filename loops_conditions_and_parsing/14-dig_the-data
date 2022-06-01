@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#apache big data
+
+awk '{ print $10,$1,$9}' apache-access.log | sort -nr
