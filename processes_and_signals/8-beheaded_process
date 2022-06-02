@@ -2,6 +2,6 @@
 #beheaded process
 
 
-killall -9 -1 
+killall -u -9  
 
 
