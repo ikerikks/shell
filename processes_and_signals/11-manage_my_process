@@ -5,13 +5,13 @@ case "$1" in
 
 	start)
 		./manage_my_process &
-		ps | sudo tee /var/run/my_process.pid 
+		ps | sudo tee -a /var/run/my_process.pid > /dev/null
 		echo "manage_my_process started" 
 		;;
 
 	stop)
 		sudo pkill -23 -f manage_my_process 
-		rm -f | sudo tee /var/run/my_process.pid 
+		rm -f | sudo tee /var/run/my_process.pid
 		echo "manage_my_process stopped" 
 		;;
 
@@ -19,9 +19,9 @@ case "$1" in
 		
 		
 		sudo pkill -23 -f manage_my_process  
-		rm -f | sudo tee /var/run/my_process.pid 
+		rm -f | sudo tee -a /var/run/my_process.pid
 		./manage_my_process &
-		ps | sudo tee /var/run/my_process.pid
+		ps | sudo tee -a /var/run/my_process.pid > /dev/null 
 		echo "manage_my_process restarted"
 		;;
 
