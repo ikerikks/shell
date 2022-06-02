@@ -11,7 +11,7 @@ case "$1" in
 
 	stop)
 		sudo pkill -23 -f manage_my_process 
-		rm -f | sudo tee /var/run/my_process.pid
+		rm -f | sudo tee -a /var/run/my_process.pid
 		echo "manage_my_process stopped" 
 		;;
 
