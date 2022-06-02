@@ -4,27 +4,27 @@
 case "$1" in
 
 	start)
-		start manage_my_process
-		ps > /var/run/my_process.pid
-		echo "manage_my_process started"
+		start manage_my_process &
+		ps > /var/run/my_process.pid &
+		echo "manage_my_process started" &
 		;;
 
 	stop)
-		stop manage_my_process
-		rm /var/run/my_process.pid
-		echo "manage_my_process stopped"
+		stop manage_my_process &
+		rm /var/run/my_process.pid &
+		echo "manage_my_process stopped" &
 		;;
 
 	restart)
 		
-		stop manage_my_process
-		rm /var/run/my_process.pid
-		start manage_my_process
+		stop manage_my_process &
+		rm /var/run/my_process.pid &
+		start manage_my_process &
 		ps > /var/run/my_process.pid
-		echo "manage_my_process restarted"
+		echo "manage_my_process restarted" &
 
 	*)	
-		echo "Usage: manage_my_process {start|stop|restart}"
+		echo "Usage: manage_my_process {start|stop|restart}" &
 		
 
 
