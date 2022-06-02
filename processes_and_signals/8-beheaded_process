@@ -2,6 +2,6 @@
 #beheaded process
 
 
-exit  
+kill -l 9 .
 
 
