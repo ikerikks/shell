@@ -5,7 +5,7 @@ case "$1" in
 
 	start)
 		./manage_my_process &
-		sudo -A ps > /var/run/my_process.pid 
+		ps | sudo tee /var/run/my_process.pid 
 		echo "manage_my_process started" 
 		;;
 
@@ -17,10 +17,11 @@ case "$1" in
 
 	restart)
 		
-		  
+		
+		pkill -f manage_my_process  
 		rm /var/run/my_process.pid 
 		./manage_my_process &
-		sudo ps > /var/run/my_process.pid
+		ps | sudo tee /var/run/my_process.pid
 		echo "manage_my_process restarted"
 		;;
 
