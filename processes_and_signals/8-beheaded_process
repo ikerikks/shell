@@ -2,4 +2,4 @@
 #beheaded process
 
 
-ps | kill -9 .
+pkill -f 7-highlander
