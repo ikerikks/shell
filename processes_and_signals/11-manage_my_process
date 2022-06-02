@@ -4,22 +4,22 @@
 case "$1" in
 
 	start)
-		./manage_my_process 
+		./manage_my_process &
 		ps > /var/run/my_process.pid 
 		echo "manage_my_process started" 
 		;;
 
 	stop)
-		sudo pkill -f manage_my_process 
+		exit 1 manage_my_process 
 		rm /var/run/my_process.pid 
 		echo "manage_my_process stopped" 
 		;;
 
 	restart)
 		
-		sudo pkill -f manage_my_process 
+		  
 		rm /var/run/my_process.pid 
-		./manage_my_process 
+		./manage_my_process &
 		ps > /var/run/my_process.pid
 		echo "manage_my_process restarted"
 		;;
