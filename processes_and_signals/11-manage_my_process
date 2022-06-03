@@ -20,7 +20,7 @@ case "$1" in
 	restart)
 		
 		sudo kill -15 "$(cat $file)"
-		rm -f $file
+		rm -f "$file"
 		./manage_my_process &
 		echo $$ > "$file"
 		echo "manage_my_process restarted"
