@@ -1,28 +1,28 @@
 #!/usr/bin/env bash
 #manage my process
 
-file=cat /var/run/my_process.pid)
+file=/var/run/my_process.pid
 
 case "$1" in
 
 	start)
 		./manage_my_process &
-		echo $$ > /var/run/my_process.pid 
+		echo $$ > $file
 		echo "manage_my_process started" 
 		;;
 
 	stop)
-		kill -15 "$$($file)"
-		rm -f | sudo tee -a /var/run/my_process.pid
+		sudo kill -15 "$(cat $file)" &&
+		rm -f $file
 		echo "manage_my_process stopped" 
 		;;
 
 	restart)
 		
-		kill -15 "$$($file)"
-		rm -f | sudo tee -a /var/run/my_process.pid
+		sudo kill -15 "$(cat $file)"
+		rm -f $file
 		./manage_my_process &
-		echo $$ > /var/run/my_process.pid
+		echo $$ > $file
 		echo "manage_my_process restarted"
 		;;
 
