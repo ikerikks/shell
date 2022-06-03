@@ -12,7 +12,7 @@ case "$1" in
 		;;
 
 	stop)
-		sudo kill -15 "$(cat $file)" &&
+		sudo kill -15 "$(cat $file)"
 		rm -f "$file"
 		echo "manage_my_process stopped" 
 		;;
