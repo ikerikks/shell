@@ -3,26 +3,31 @@
 
 file=/var/run/my_process.pid
 
+start() {
+	./manage_my_process &
+	echo "$$" > "$file"
+}
+
+stop() {
+	sudo kill -15 "$(cat $file)" && rm "$file"
+}
+
+
 case "$1" in
 
 	start)
-		./manage_my_process &
-		echo $$ > "$file"
-		echo "manage_my_process started" 
+		start
+		echo "manage_my_process started"
 		;;
 
 	stop)
-		sudo kill -15 "$(cat $file)"
-		rm -f "$file"
-		echo "manage_my_process stopped" 
+		stop
+		echo "manage_my_process stopped"
 		;;
 
 	restart)
-		
-		sudo kill -15 "$(cat $file)"
-		rm -f "$file"
-		./manage_my_process &
-		echo $$ > "$file"
+		stop
+		start
 		echo "manage_my_process restarted"
 		;;
 
@@ -30,5 +35,7 @@ case "$1" in
 		echo "Usage: manage_my_process {start|stop|restart}" 
 		
 	esac
+
+	exit 0
 
 
