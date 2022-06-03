@@ -10,7 +10,7 @@ case "$1" in
 		;;
 
 	stop)
-	       	pkill -23 -f my_process.pid
+	       	pkill -15 -f my_process.pid
 		rm -f | sudo tee -a /var/run/my_process.pid
 		echo "manage_my_process stopped" 
 		;;
@@ -18,7 +18,7 @@ case "$1" in
 	restart)
 		
 		
-		pkill -23 -f my_process.pid
+		pkill -15 -f my_process.pid
 		rm -f | sudo tee -a /var/run/my_process.pid
 		./manage_my_process &
 		echo $$ > /var/run/my_process.pid
