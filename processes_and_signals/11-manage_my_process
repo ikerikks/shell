@@ -10,14 +10,14 @@ case "$1" in
 		;;
 
 	stop)
-		kill -15 "$(cat /var/run/my_process.pid)"
+		kill -15 $$ cat /var/run/my_process.pid)
 		rm -f | sudo tee -a /var/run/my_process.pid
 		echo "manage_my_process stopped" 
 		;;
 
 	restart)
 		
-		kill -15 "$(cat /var/run/my_process.pid)"
+		kill -15 $$ cat /var/run/my_process.pid)
 		rm -f | sudo tee -a /var/run/my_process.pid
 		./manage_my_process &
 		echo $$ > /var/run/my_process.pid
